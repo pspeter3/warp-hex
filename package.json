@@ -24,12 +24,15 @@
     "build": "vite build",
     "fix": "prettier --cache --write '*.{md,html}' 'src/**/*.ts'",
     "start": "vite",
-    "test": "tsc --build --pretty"
+    "test:spec": "vitest run --coverage --coverage.thresholds.100",
+    "test:types": "tsc --build --pretty"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.17",
     "prettier": "^3.7.4",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17"
   },
   "prettier": {
     "plugins": [

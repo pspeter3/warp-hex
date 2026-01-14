@@ -1,1 +1,1 @@
-console.log("Warp Hex");
+export const NAME = "warp-hex";
