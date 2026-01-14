@@ -19,3 +19,5 @@ TypeScript uses ES modules and 2-space indentation (Prettier default). Prefer de
 ## Testing Guidelines
 
 Vitest drives specs (`*.test.ts`) and coverage, with the config forcing 100% thresholds through `vitest run --coverage --coverage.thresholds.100`. Place scenario-focused helpers near the tests that use them. Type safety is enforced via `npm run test:types` (tsc) and formatting via `npm run test:format`. CI mirrors `npm run test`, so ensure it passes locally before opening a PR.
+
+Prefer Vitest's `suite`/`test` helpers over Mocha-style `describe`/`it` for consistency across specs.
