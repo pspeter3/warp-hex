@@ -1,0 +1,95 @@
+{
+  "name": "warp-hex",
+  "description": "Warped Hexagon Grid Demo",
+  "private": true,
+  "keywords": [
+    "hexagon",
+    "grid",
+    "noise",
+    "jitter",
+    "procedural-generation"
+  ],
+  "homepage": "https://github.com/pspeter3/warp-hex#readme",
+  "bugs": {
+    "url": "https://github.com/pspeter3/warp-hex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pspeter3/warp-hex.git"
+  },
+  "license": "MIT",
+  "author": "Phips Peter",
+  "type": "module",
+  "scripts": {
+    "build": "wireit",
+    "fix": "wireit",
+    "start": "vite",
+    "test": "wireit",
+    "test:format": "wireit",
+    "test:spec": "wireit",
+    "test:types": "wireit"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.17",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17",
+    "wireit": "^0.14.12"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
+  "wireit": {
+    "build": {
+      "command": "vite build",
+      "files": [
+        "index.html",
+        "src/**/*.ts"
+      ],
+      "output": [
+        "dist/**"
+      ]
+    },
+    "fix": {
+      "command": "prettier --cache --write '*.{md,html}' '.github/**/*' 'src/**/*.ts'"
+    },
+    "test": {
+      "dependencies": [
+        "test:format",
+        "test:spec",
+        "test:types"
+      ]
+    },
+    "test:format": {
+      "command": "prettier --check --cache '*.{md,html}' '.github/**/*' 'src/**/*.ts'",
+      "files": [
+        "*.{md,html}",
+        ".github/**/*",
+        "src/**/*.ts"
+      ]
+    },
+    "test:spec": {
+      "command": "vitest run --coverage --coverage.thresholds.100",
+      "files": [
+        "src/**/*.ts"
+      ],
+      "output": [
+        "coverage/**"
+      ]
+    },
+    "test:types": {
+      "command": "tsc",
+      "clean": "if-file-deleted",
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": [
+        "tsconfig.tsbuildinfo"
+      ]
+    }
+  }
+}
