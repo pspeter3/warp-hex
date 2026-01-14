@@ -54,7 +54,7 @@
       ]
     },
     "fix": {
-      "command": "prettier --cache --write '*.{md,html}' 'src/**/*.ts'"
+      "command": "prettier --cache --write '*.{md,html}' '.github/**/*' 'src/**/*.ts'"
     },
     "test": {
       "dependencies": [
@@ -64,9 +64,10 @@
       ]
     },
     "test:format": {
-      "command": "prettier --check --cache '*.{md,html}' 'src/**/*.ts'",
+      "command": "prettier --check --cache '*.{md,html}' '.github/**/*' 'src/**/*.ts'",
       "files": [
         "*.{md,html}",
+        ".github/**/*",
         "src/**/*.ts"
       ]
     },
