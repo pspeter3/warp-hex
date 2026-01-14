@@ -1,0 +1,26 @@
+{
+  "name": "warp-hex",
+  "description": "Warped Hexagon Grid Demo",
+  "private": true,
+  "keywords": [
+    "hexagon",
+    "grid",
+    "noise",
+    "jitter",
+    "procedural-generation"
+  ],
+  "homepage": "https://github.com/pspeter3/warp-hex#readme",
+  "bugs": {
+    "url": "https://github.com/pspeter3/warp-hex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pspeter3/warp-hex.git"
+  },
+  "license": "MIT",
+  "author": "Phips Peter",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
