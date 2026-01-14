@@ -21,6 +21,11 @@
   "author": "Phips Peter",
   "type": "module",
   "scripts": {
+    "build": "vite build",
+    "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
   }
 }
