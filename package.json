@@ -22,10 +22,18 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "fix": "prettier --cache --write '*.{md,html}' 'src/**/*.ts'",
     "start": "vite",
     "test": "tsc --build --pretty"
   },
   "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "vite": "^7.3.1"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
   }
 }
